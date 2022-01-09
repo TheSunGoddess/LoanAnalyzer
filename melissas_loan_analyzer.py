@@ -8,28 +8,28 @@ loan_costs = [500, 600, 200, 1000, 450]
 
 # How many loans are in the list?
 # @TODO: Use the `len` function to calculate the total number of loans in the list.
-# Print the number of loans from the list
+# Print the number of loans from the list.
 
 number_of_loans = len(loan_costs)
 print(f"The number of loans is : {number_of_loans}.")
 
 # What is the total of all loans?
 # @TODO: Use the `sum` function to calculate the total of all loans in the list.
-# Print the total value of the loans
+# Print the total value of the loans.
 
 loan_total = sum(loan_costs)
 print(f"The sum of the loan costs total: ${loan_total}.")
 
 # What is the average loan amount from the list?
 # @TODO: Using the sum of all loans and the total number of loans, calculate the average loan price.
-# Print the average loan amount
+# Print the average loan amount.
 
 average_loan_price = loan_total / number_of_loans
 print(f"The average loan price of all 5 loans is: ${average_loan_price}.")
 
 
 """Part 2"""
-# Given the following loan data, you will need to calculate the present value for the loan
+# Given the following loan data, you will need to calculate the present value for the loan.
 
 loan = {
     "loan_price": 500,
@@ -45,7 +45,7 @@ loan = {
 future_value = loan.get("future_value")
 print(f"The future value of the loan is: ${future_value}.")
 remaining_months = loan.get("remaining_months")
-print(f"The remaining months left on the loan is: {remaining_months}")
+print(f"The remaining months left on the loan is: {remaining_months}.")
 
 # @TODO: Use the formula for Present Value to calculate a "fair value" of the loan.
 # Use a minimum required return of 20% as the discount rate.
@@ -54,7 +54,7 @@ print(f"The remaining months left on the loan is: {remaining_months}")
 
 annual_discount_rate = .2
 present_value = future_value / (1 + annual_discount_rate/12) ** remaining_months
-print(f"The present value of the loan is: {present_value:.2f}.")
+print(f"The present value of the loan is: ${present_value:.2f}.")
 
 
 # If Present Value represents what the loan is really worth, does it make sense to buy the loan at its cost?
@@ -72,7 +72,7 @@ else:
 
 """Part 3"""
 
-# Given the following loan data, you will need to calculate the present value for the loan
+# Given the following loan data, you will need to calculate the present value for the loan.
 new_loan = {
     "loan_price": 800,
     "remaining_months": 12,
@@ -81,7 +81,7 @@ new_loan = {
 }
 
 # @TODO: Define a new function that will be used to calculate present value.
-#    This function should include parameters for `future_value`, `remaining_months`, and the `annual_discount_rate`
+#    This function should include parameters for `future_value`, `remaining_months`, and the `annual_discount_rate`.
 #    The function should return the `present_value` for the loan.
 
 annual_discount_rate = .2
@@ -94,7 +94,7 @@ def calculate_present_value(future_value, remaining_months, annual_discout_rate)
 #    Use an `annual_discount_rate` of 0.2 for this new loan calculation.
 
 present_value = calculate_present_value(new_loan.get("future_value"), new_loan["remaining_months"], 0.20)
-print(f"The present value of the loan is: {present_value:.2f}")
+print(f"The present value of the loan is: ${present_value:.2f}.")
 
 
 """Part 4"""
@@ -127,11 +127,11 @@ loans = [
     },
 ]
 
-# @TODO: Create an empty list called `inexpensive_loans`
+# @TODO: Create an empty list called `inexpensive_loans`.
 
 inexpensive_loans = []
 
-# @TODO: Loop through all the loans and append any that cost $500 or less to the `inexpensive_loans` list
+# @TODO: Loop through all the loans and append any that cost $500 or less to the `inexpensive_loans` list.
 
 for loan in loans:
     if loan["loan_price"] <= 500:
@@ -140,7 +140,7 @@ for loan in loans:
         print(inexpensive_loans)
 
 
-# @TODO: Print the `inexpensive_loans` list
+# @TODO: Print the `inexpensive_loans` list.
 
 print(f"The inexpensive loans are as follows: {inexpensive_loans}")
 
